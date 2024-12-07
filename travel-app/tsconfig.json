@@ -1,19 +1,27 @@
 {
   "compilerOptions": {
-    "target": "esnext", // Compile to the latest ECMAScript standard
-    "lib": ["dom", "dom.iterable", "esnext"], // Includes standard web API support
-    "allowJs": true, // Allows .js files to be used in the project
-    "skipLibCheck": true, // Skip checking types in the library files
-    "strict": true, // Enable all strict type-checking options
-    "noEmit": true, // Do not output any .js files
-    "esModuleInterop": true, // Enable import and export interop between ES6 and CommonJS
-    "module": "esnext", // Use ES6 modules
-    "moduleResolution": "bundler", // Use the bundler for module resolution
-    "resolveJsonModule": true, // Allow .json files to be imported as modules
-    "isolatedModules": true, // Compile each file separately
-    "jsx": "preserve", // Preserve JSX syntax in .tsx files
-    "incremental": true // Enable incremental compilation
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  "exclude": ["node_modules"], // Exclude node_modules directory
-  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js"] // Explicitly include files for type checking
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.js"],
+  "exclude": ["node_modules"]
 }
