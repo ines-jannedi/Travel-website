@@ -12,8 +12,8 @@
     "resolveJsonModule": true, // Allow .json files to be imported as modules
     "isolatedModules": true, // Compile each file separately
     "jsx": "preserve", // Preserve JSX syntax in .tsx files
-    "incremental": true, // Enable incremental compilation
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"], // Include TypeScript files
-    "exclude": ["node_modules"] // Exclude node_modules directory
-  }
+    "incremental": true // Enable incremental compilation
+  },
+  "exclude": ["node_modules"], // Exclude node_modules directory
+  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js"] // Explicitly include files for type checking
 }
